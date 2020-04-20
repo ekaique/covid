@@ -1,0 +1,44 @@
+import re
+import time
+
+
+def getpesq():
+
+    while True:
+
+
+
+        print("\033[1;31m                       ***************************************************")
+        print('\033[1;31m                       ********** Welcome to Search fdata ****************')
+        print('\033[1;31m                       ***************************************************\n')
+        print('Consulte dados vazados, CPF, Email e Cartão')
+
+
+
+        fdatacard = ['5260306801070694', '5581605365205956', '5369151643133486', '4383380952331432', '4778371932135566', '4877929079461754', '4839726757804264', '4839726757804264', '4649809918140073', '4228879778209440', '4461566303552867', '4683525691634168', '4337551296648254', '4643655472495098', '4314726173301287', '4502902873362323', '4173658065621177', '4488220435110835', '4485948297083012', '4958887589980972', '4418747337448942', '4267529200069084',]
+        fdatacpf = ['50429866003', '64933618003',  '73005519040', '75645977041', '30596337035', '95356739044', '64616572070', '09240650016', '82391339089', '57899234026', '28306972007', '28828588098', '67268392001', '27542359061', '09766229040', '09766229040', '40269738088', ]
+        fdataemail = ['a_vanessinha_1990@hotmail.com', "a3sign@pandora.be", "aaanika2@hotmail.com ", "aaron2003s@bol.com.br ", "aaron--21@hotmail.com ", "abidoral@hotmail.com ", "abk_333@hotmail.com ", "abner_bim@hotmail.com ", "abner_bim@hotmail.com ","acacio_divix@hotmail.com ","academia.boaforma@yahoo.com.br ", "ac-ferian@bol.com.br ","acordarsono@hotmail.com ", "acsa_lim@yahoo.com.br ","adamyth@gmail.com ", "add_ae_jente@yahoo.com.br ","addgeral@gmail.com ", "addyevusk@yahoo.com.br ","adeozemir@yahoo.com.br ", "adhaha@gmail.com ","adhaha@gmail.com ", "adidas__star@hotmail.com ","adidas__star@hotmail.com ", "adilio-vidaloka@yahoo.com.br ", "adilson.mariano5@terra.com.br ", "admgerald1@yahoo.com.br ", "adri_barboza@hotmail.com ", "adri_barboza@hotmail.com ", "adriaens@pandora.be ", "adrian_boyzinhu@yahoo.com.br ", "adriana_lemes_farias@hotmail.com ", "adriana_lemes_farias@hotmail.com ", "adrianacpx@yahoo.com.br ","adriane_do_prado@yahoo.com.br ", "adrianinhaim@bol.com.br ", "adrianinhaim@bol.com.br ", "adrianinhaxp@yahoo.com.br ", "adriano.fariasnascimento@yahoo.com.br ", "adriano_wolf1@hotmail.com ","adrianogato.2007@hotmail.com ","adrianojareck@hotmail.com ","adrianonev3s@gmail.com ","adrianosenna@yahoo.com.br ","adrianraniery@bol.com.br ","Adriedson88@hotmail.com ","adrieli_baldoria@hotmail.com ","adrielle_amaral@yahoo.com.br ","adrielli_cr@hotmail.com ","adrielly@yaroo.com ","adrielly_silva@yaroo.com ",]
+
+        pesq = str(input('Digite o dado que deseja verificar: ')).lower()
+       # pesquisa = re.search(pesq, fdataemail)
+        for x in fdatacard:
+            print('Pesquisando em Cartões.')
+            time.sleep(1)
+            if x == pesq:
+                print('Encontramos ', pesq)
+                quit()
+            else:
+                for x in fdatacpf:
+                    print('Pesquisando em CPF..')
+                    time.sleep(1)
+                    if x == pesq:
+                        print('Encontrado', pesq)
+                        quit()
+                    else:
+                        for x in fdataemail:
+                            if x == pesq:
+                                print('Pesquisando em Emails...')
+                                time.sleep(1)
+                                print('Encontrado', pesq)
+                                return pesq
+print(getpesq())
